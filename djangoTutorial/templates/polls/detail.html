@@ -1,0 +1,17 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+{% if question %}
+    <p>
+    {{ question }}
+    <br>
+    Texto: {{ question.question_text }}
+    <br>
+    Id: {{ question.id }}
+    <br>
+    Publicada recientemente? {{ question.was_published_recently }}
+    </p>
+    <a href="{% url 'resultsURL' question.id %}">Resultados</a>
+    <a href="{% url 'voteURL' question.id %}">Votos</a>
+{% else %}
+           <p>Esta pregunta no existe.</p>
+{% endif %}

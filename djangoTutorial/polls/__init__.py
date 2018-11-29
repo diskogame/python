@@ -1,0 +1,1 @@
+#los deletes de las que tienen opciones

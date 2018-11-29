@@ -1,0 +1,22 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+<form action="{% url 'nuevoObjeto' %}" method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Save</button>
+</form>
+
+{% if questions %}
+<ul>
+    {% for question in questions %}
+    <a href="{% url 'update' question.id %}">{{ question.question_text }}</a>
+
+    <a href="{% url 'delete' question.id %}">Delete</a>
+    <br>
+    {% endfor %}
+</ul>
+{% else %}
+<p>Si estamos aqui questions es nulo porque hemos llamado directamente a
+    create() y este no devuelve questions en el render</p>
+{% endif %}
+
