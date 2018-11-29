@@ -1,5 +1,5 @@
 Python 3.7.1
-IDE Django
+IDE - PyCharm - Framework Django
 
 Crear app polls:  python manage.py startapp polls
 
