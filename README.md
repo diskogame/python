@@ -1,3 +1,6 @@
+Python 3.7.1
+IDE Django
+
 Crear app polls:  python manage.py startapp polls
 
 En manage.py pulsar Cntrl+Alt+R y poner runserver. Abrir navegador
